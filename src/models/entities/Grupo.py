@@ -15,5 +15,5 @@ class Grupo():
             'id_profesor' : self.id_profesor, 
             'horario':self.horario,
             'lugar':self.lugar,
-            'self.idCurso': self.idCurso
+            'idCurso': self.idCurso
         }

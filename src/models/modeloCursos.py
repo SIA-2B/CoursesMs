@@ -11,11 +11,11 @@ class modeloCursos():
             cursosA = []
 
             with connection.cursor() as cursor:
-                cursor.execute("SELECT id, nombre, creditos, tipologia, sede FROM cursos ORDER BY nombre ASC")
+                cursor.execute("SELECT * FROM cursos ORDER BY nombre ASC")
                 resultset = cursor.fetchall()
 
                 for row in resultset:
-                    curso = Curso(row[0], row[1], row[2], row[3],row[4])
+                    curso = Curso(row[0], row[1], row[2], row[3],row[4],row[5],row[6],row[7],row[8],row[9])
                     cursosA.append(curso.to_JSON())
 
             connection.close()
