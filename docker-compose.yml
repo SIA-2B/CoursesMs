@@ -6,11 +6,12 @@ services:
     restart: always
     build:
       context: ./
+      dockerfile: Dockerfile
     ports:
-      - 5000:5000
+      - 4000:4000
     container_name: servicio_B
 
-  
+  #docker-compose up --build
 
   # postgres:
   #   image: postgres

@@ -11,7 +11,7 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-EXPOSE 5000
+EXPOSE 4000
 
 CMD ["python","./src/app.py"]
 # docker run -p 5000:5000 cursosflask
