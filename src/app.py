@@ -4,12 +4,12 @@ from flask_cors import CORS
 from config import config
 
 # Routes
-from routes import cursos, planEstudios
-from routes import grupos
+from routes import cursos, grupos, planEstudios
+
 
 app = Flask(__name__)
 
-CORS(app, resources={"*": {"origins": "http://localhost:5000"}})
+CORS(app, resources={"*": {"origins": ""}})
 
 
 def page_not_found(error):
@@ -26,4 +26,4 @@ if __name__ == '__main__':
 
     # Error handlers
     app.register_error_handler(404, page_not_found)
-    app.run(host="0.0.0.0", port=4000, debug=True)
+    app.run(host="0.0.0.0", port=4001, debug=True)

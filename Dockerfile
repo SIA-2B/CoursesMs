@@ -11,7 +11,7 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-EXPOSE 4000
 
 CMD ["python","./src/app.py"]
-# docker run -p 5000:5000 cursosflask
+# docker run -p 4001:4001 cursosflask
+# docker run -p 4001:4001 cursosflask

@@ -8,7 +8,7 @@ services:
       context: ./
       dockerfile: Dockerfile
     ports:
-      - 4000:4000
+      - 4001:4001
     container_name: servicio_B
 
   #docker-compose up --build
