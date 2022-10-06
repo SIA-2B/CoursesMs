@@ -40,18 +40,18 @@ def get_grupo(id):
         return jsonify({'message':  str(ex)}), 500
    
     
-@main.route('/updateCupo/<id>/<sum>', methods=['PUT'])
-def update_CupoGrupo(id,sum):
+@main.route('/updateCupo/<idGrupo>/<suma>', methods=['PUT','GET'])
+def plusGrupos(idGrupo,suma):
     try:
-        grupo1= modeloGrupos.get_grupo(id)
-        suma =int(sum)
+        grupo1= modeloGrupos.get_grupo(idGrupo)
+        suma =int(suma)
         
-        affected_rows = modeloGrupos.update_CupoGrupo(int(grupo1["cupos"]),suma,id)
+        affected_rows = modeloGrupos.update_CupoGrupo(grupo1["cupos"],suma,idGrupo)
 
         
         if affected_rows == 1:
-            grupo1= modeloGrupos.get_grupo(id)
-            return jsonify(grupo1)
+            grupo2= modeloGrupos.get_grupo(idGrupo)
+            return jsonify(grupo2)
         else:
             return jsonify({'message': "No movie updated"}), 404
 

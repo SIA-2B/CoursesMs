@@ -5,11 +5,11 @@ services:
   cursos_service:
     restart: always
     build:
-      context: ./
+      context: .
       dockerfile: Dockerfile
     ports:
       - 4001:4001
-    container_name: servicio_B
+    container_name: servicio_cursos
 
   #docker-compose up --build
 
