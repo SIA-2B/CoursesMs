@@ -1,9 +1,9 @@
 class Grupo():
     
-    def __init__(self, id=None, numero = None, id_profesor=None, cupos=None, horario=None, lugar=None,idCurso=None) -> None:
+    def __init__(self, id=None, numero = None, idprofesor=None, cupos=None, horario=None, lugar=None,idCurso=None) -> None:
         self.id = id 
         self.numero = numero
-        self.id_profesor = id_profesor
+        self.idprofesor = idprofesor
         self.cupos = cupos
         self.horario = horario
         self.lugar = lugar
@@ -13,7 +13,7 @@ class Grupo():
         return{
             'id': self.id, 
             'numero' : self.numero, 
-            'id_profesor' : self.id_profesor,
+            'idprofesor' : self.idprofesor,
             'cupos' : self.cupos,
             'horario':self.horario,
             'lugar':self.lugar,

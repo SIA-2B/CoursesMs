@@ -10,7 +10,7 @@ class modeloGrupos():
             GruposA = []
 
             with connection.cursor() as cursor:
-                cursor.execute("SELECT * FROM Grupos ORDER BY id_curso")
+                cursor.execute("SELECT * FROM Grupos ORDER BY idcurso")
                 resultset = cursor.fetchall()
 
                 for row in resultset:
@@ -30,7 +30,7 @@ class modeloGrupos():
             GruposA = []
 
             with connection.cursor() as cursor:
-                cursor.execute("SELECT * FROM Grupos WHERE id_curso=%s ORDER BY id_curso",(idCurso,))
+                cursor.execute("SELECT * FROM Grupos WHERE idcurso=%s ORDER BY idcurso",(idCurso,))
                 resultset = cursor.fetchall()
 
                 for row in resultset:
@@ -48,7 +48,7 @@ class modeloGrupos():
             connection = get_connection()
             
             with connection.cursor() as cursor:
-                cursor.execute("SELECT * FROM grupos WHERE id=%s ORDER BY id_curso",(id,))
+                cursor.execute("SELECT * FROM grupos WHERE id=%s ORDER BY idcurso",(id,))
                 row = cursor.fetchone()
 
                 grupo = None

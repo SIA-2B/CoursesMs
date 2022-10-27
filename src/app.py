@@ -23,6 +23,7 @@ if __name__ == '__main__':
     app.register_blueprint(cursos.main, url_prefix='/api/search/cursos')
     app.register_blueprint(grupos.main, url_prefix='/api/search/grupos')
     app.register_blueprint(planEstudios.main, url_prefix='/api/search/planEstudios')
+    
 
     # Error handlers
     app.register_error_handler(404, page_not_found)

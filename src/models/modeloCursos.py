@@ -90,7 +90,7 @@ class modeloCursos():
             cursosxPlan = []
 
             with connection.cursor() as cursor:
-                cursor.execute("SELECT * FROM public.curso_plan WHERE id_plan = %s",(idplan,))
+                cursor.execute("SELECT * FROM cursoplan WHERE idplan = %s",(idplan,))
                 resultset = cursor.fetchall()
                 
                 
