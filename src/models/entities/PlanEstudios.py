@@ -1,15 +1,15 @@
 class PlanEstudios():
     
-    def __init__(self, codigo=None, nombre = None, nivel_estudios=None) -> None:
+    def __init__(self, codigo=None, nombre = None, nivelestudios=None) -> None:
         self.codigo = codigo 
         self.nombre = nombre
-        self.nivel_estudios = nivel_estudios
+        self.nivelestudios = nivelestudios
 
     
     def to_JSON(self):
         return{
             'codigo': self.codigo, 
             'nombre' : self.nombre, 
-            'nivel_estudios' : self.nivel_estudios
+            'nivelestudios' : self.nivelestudios
         }
     
