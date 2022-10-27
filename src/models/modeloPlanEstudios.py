@@ -10,7 +10,7 @@ class modeloPlanEstudios():
             vectorPlanEstudiossA = []
 
             with connection.cursor() as cursor:
-                cursor.execute("SELECT * FROM planyestudio ORDER BY codigo ASC")
+                cursor.execute("SELECT * FROM planestudio ORDER BY codigo ASC")
                 resultset = cursor.fetchall()
 
                 for row in resultset:
