@@ -9,7 +9,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - 4001:4001
-    container_name: servicio_cursos
+    container_name: servicio_cursos2
 
   #docker-compose up --build
 
